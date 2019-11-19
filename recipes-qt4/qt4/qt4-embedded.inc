@@ -12,6 +12,7 @@ QT_BASE_LIB  ?= "libqt-embedded"
 # Set necessary variables in the profile
 SRC_URI += "file://qte.sh \
             file://0033-configure-support-c-0x-standard-for-directfd.patch \
+            file://0038-3rdparty-javascriptcore-JITStubs.cpp-allow-builds-of.patch \
 "
 
 QT_EMBEDDED_FLAGS ?= " \
