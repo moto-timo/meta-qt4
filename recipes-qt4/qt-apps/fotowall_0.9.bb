@@ -11,7 +11,7 @@ SECTION = "x11/apps"
 PR = "r4"
 
 SRCREV = "06d5a4142c599604d9a9fd64727b6945eb8cd3da"
-SRC_URI = "git://github.com/enricoros/fotowall.git \
+SRC_URI = "git://github.com/enricoros/fotowall.git;branch=master;protocol=https \
            file://ExportWizard-depends-on-ui_wizard.patch \
            "
 
