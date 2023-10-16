@@ -21,8 +21,8 @@ SRC_URI = "http://download.qt-project.org/archive/qt/4.8/${PV}/qt-everywhere-ope
            file://0018-configure-make-pulseaudio-a-configurable-option.patch \
            file://0019-Fixes-for-gcc-4.7.0-particularly-on-qemux86.patch \
            file://0027-tools.pro-disable-qmeegographicssystemhelper.patch \
-           file://0030-aarch64:arm64_qatomic_support.patch \
-           file://0031-aarch64:arm64_mkspecs.patch \
+           file://0030-aarch64_arm64_qatomic_support.patch \
+           file://0031-aarch64_arm64_mkspecs.patch \
            file://0032-aarch64_add_header.patch \
            file://0034-Fix-kmap2qmap-build-with-clang.patch \
            file://0035-Add-nios2-support.patch \
