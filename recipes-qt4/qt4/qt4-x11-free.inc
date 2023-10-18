@@ -20,11 +20,11 @@ QT_BASE_LIB  ?= "libqt"
 QT_KDE_FLAGS ?= "-accessibility -sm"
 QT_DISTRO_FLAGS ?= "${QT_KDE_FLAGS}"
 
-inherit qt4x11
+inherit qt4x11 pkgconfig
 
 do_install:append() {
   # fix pkgconfig, libtool and prl files
-  sed -i -e 's#I/usr/include#Iincludedir}#g' \ 
+  sed -i -e 's#I/usr/include#Iincludedir}#g' \
     -e 's#Iin#I${in#g' \
     ${D}${libdir}/*.la ${D}${libdir}/*.prl ${D}${libdir}/pkgconfig/*.pc
 
