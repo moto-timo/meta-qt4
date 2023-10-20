@@ -30,6 +30,7 @@ SRC_URI = "http://download.qt-project.org/archive/qt/4.8/${PV}/qt-everywhere-ope
            file://0037-fix-configure-with-icu60.patch \
            file://0038-prevent-gcc-9.2-miscompiling-Q_FOREACH.patch \
            file://0039-silence-some-loud-but-innocent-warnings.patch \
+           file://0040-qt4-x11-free-messagemodel.cpp-comparison-patch.patch \
            file://gcc-version.patch \
            file://Fix-QWSLock-invalid-argument-logs.patch \
            file://add_check_for_aarch64_32.patch \

@@ -20,6 +20,7 @@ SRC_URI = "http://download.qt-project.org/archive/qt/4.8/${PV}/qt-everywhere-ope
            file://0036-qt-everywhere-opensource-src-4.8.7-gcc6.patch \
            file://0038-prevent-gcc-9.2-miscompiling-Q_FOREACH.patch \
            file://0039-silence-some-loud-but-innocent-warnings.patch \
+           file://0040-qt4-x11-free-messagemodel.cpp-comparison-patch.patch \
            file://gcc-version.patch \
            file://g++.conf \
            file://linux.conf \
