@@ -276,13 +276,13 @@ do_compile() {
 python populate_packages:prepend() {
     translation_dir = d.expand('${datadir}/${QT_DIR_NAME}/translations/')
     translation_name = d.expand('${QT_BASE_NAME}-translation-%s')
-    do_split_packages(d, translation_dir, '^(assistant|designer|linguist|qt|qtconfig|qvfb|qtscript)_(.*)\.qm$', translation_name, '${PN} translation for %s', extra_depends='' )
+    do_split_packages(d, translation_dir, r'^(assistant|designer|linguist|qt|qtconfig|qvfb|qtscript)_(.*)\.qm$', translation_name, '${PN} translation for %s', extra_depends='' )
  
     phrasebook_dir = d.expand('${datadir}/${QT_DIR_NAME}/phrasebooks/')
     phrasebook_name = d.expand('${QT_BASE_NAME}-phrasebook-%s')
 
     if os.path.exists("%s%s" % (d.expand('${D}'), phrasebook_dir)):
-        do_split_packages(d, phrasebook_dir, '^(.*)\.qph$', phrasebook_name, '${PN} phrasebook for %s', extra_depends='' )
+        do_split_packages(d, phrasebook_dir, r'^(.*)\.qph$', phrasebook_name, '${PN} phrasebook for %s', extra_depends='' )
     else:
         bb.note("The path does not exist:", d.expand('${D}'), phrasebook_dir)
  
@@ -312,22 +312,22 @@ python populate_packages:prepend() {
 
         d.setVar('PACKAGES', packages)
 
-    qtopia_split('accessible',    'accessible',    '^libq(.*)\.so$')
-    qtopia_split('codecs',        'codec',         '^libq(.*)\.so$')
-    qtopia_split('decorations',   'decoration',    '^libqdecoration(.*)\.so$')
-    qtopia_split('designer',      'designer',      '^lib(.*)\.so$')
-    qtopia_split('gfxdrivers',    'gfxdriver',     '^libq(.*)\.so$')
-    qtopia_split('graphicssystems','graphicssystems', '^libq(.*)\.so$')
-    qtopia_split('kbddrivers',    'kbddriver',     '^libq(.*)kbddriver\.so$')
-    qtopia_split('mousedrivers',  'mousedriver',   '^libq(.*)mousedriver\.so$')
-    qtopia_split('iconengines',   'iconengine',    '^libq(.*)\.so$')
-    qtopia_split('imageformats',  'imageformat',   '^libq(.*)\.so$')
-    qtopia_split('inputmethods',  'inputmethod',   '^libq(.*)\.so$')
-    qtopia_split('sqldrivers',    'sqldriver',     '^libq(.*)\.so$')
-    qtopia_split('script',        'script',        '^libqtscript(.*)\.so$')
-    qtopia_split('styles',        'style',         '^libq(.*)\.so$')
-    qtopia_split('phonon_backend','phonon-backend','^libphonon_(.*)\.so$')
-    qtopia_split('bearer',        'bearer',        '^libq(.*)bearer\.so$')
+    qtopia_split('accessible',    'accessible',    r'^libq(.*)\.so$')
+    qtopia_split('codecs',        'codec',         r'^libq(.*)\.so$')
+    qtopia_split('decorations',   'decoration',    r'^libqdecoration(.*)\.so$')
+    qtopia_split('designer',      'designer',      r'^lib(.*)\.so$')
+    qtopia_split('gfxdrivers',    'gfxdriver',     r'^libq(.*)\.so$')
+    qtopia_split('graphicssystems','graphicssystems', r'^libq(.*)\.so$')
+    qtopia_split('kbddrivers',    'kbddriver',     r'^libq(.*)kbddriver\.so$')
+    qtopia_split('mousedrivers',  'mousedriver',   r'^libq(.*)mousedriver\.so$')
+    qtopia_split('iconengines',   'iconengine',    r'^libq(.*)\.so$')
+    qtopia_split('imageformats',  'imageformat',   r'^libq(.*)\.so$')
+    qtopia_split('inputmethods',  'inputmethod',   r'^libq(.*)\.so$')
+    qtopia_split('sqldrivers',    'sqldriver',     r'^libq(.*)\.so$')
+    qtopia_split('script',        'script',        r'^libqtscript(.*)\.so$')
+    qtopia_split('styles',        'style',         r'^libq(.*)\.so$')
+    qtopia_split('phonon_backend','phonon-backend',r'^libphonon_(.*)\.so$')
+    qtopia_split('bearer',        'bearer',        r'^libq(.*)bearer\.so$')
 }
 
 do_install() {
